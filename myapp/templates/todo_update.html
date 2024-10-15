@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content%}
+    <h2 style="text-align: center;">EDIT TODO</h2>
+    <div class="todo_create">
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="sub_update">Save Changes</button>
+        </form>
+    </div>
+{% endblock %}

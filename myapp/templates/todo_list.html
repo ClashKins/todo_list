@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 style="text-align: center;"><img src="static/logo.png" alt="logo" class="logos"></h2>
+{% csrf_token %}
+<button type="button" id="btn1" class="button" style="vertical-align: middle;"><a href="{% url 'todo_create' %}"><span>Add Todo</span></a></button>
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Description</th> 
+        <th>Time</th>
+        <th>Due Date</th>
+        <th>Actions</th>
+        <th>Completed</th>
+    </tr>
+    {% for todo in todos %}
+    <tr>
+        <td>{{ todo.title }}</td>
+        <td>{{ todo.description }}</td>
+        <td>
+            {{ todo.time }}
+        </td>
+        <td>
+            {{ todo.due_date }}
+        </td>
+        <td>
+            <button type="button" id="action-1"><a href="{% url 'todo_update' todo.pk %}">Update</a></button>
+            <button type="button" id="action-2"><a href="{% url 'todo_delete' todo.pk %}">Delete</a></button>
+        </td>
+        <td>
+            {{ todo.completed }}
+        </td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td colspan="6" style="text-align: center;">There is no activities</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

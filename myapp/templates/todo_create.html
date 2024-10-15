@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 style="text-align: center;"><a href="{% url 'todo_list' %}" style="color: black;">>>> Click Here To Back <<<</a></h2></h2>
+<div class="todo_create">
+    <form action="{% url 'todo_create' %}" method="POST" autocomplete="off">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="subm" id="sbm1">Save</button>
+    </form>
+</div>
+
+{% endblock content %}

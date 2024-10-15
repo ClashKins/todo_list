@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300&display=swap');
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background: rgb(236,233,230);
+    background: linear-gradient(0deg, rgba(236,233,230,1) 60%, rgba(255,255,255,1) 100%);
+    height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.todo_create{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 800px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    background: rgb(161,196,253);
+    background: linear-gradient(0deg, rgba(161,196,253,1) 40%, rgba(194,233,251,1) 100%);
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(red, green, blue, alpha);
+}
+
+.todo_delete{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 800px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    background: rgb(161,196,253);
+    background: linear-gradient(0deg, rgba(161,196,253,1) 40%, rgba(194,233,251,1) 100%);
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(red, green, blue, alpha);
+}
+
+label{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+input[type="text"],
+textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    resize: none;
+}
+button[type="submit"]{
+    padding: 10px 20px;
+    background-color: wheat;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+}
+button[type="submit"]:hover{
+    background-color: #89eb34;
+}
+
+button[type="button"]{
+    background-color: wheat;
+    border: 1px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-bottom: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.button span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span::after{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span{
+    padding-right: 25px;
+}
+
+.button:hover span::after{
+    opacity: 1;
+    right: 0;
+}
+
+button[type="button"]:hover{
+    background-color: #34a8eb;
+}
+
+table{
+    width: 100%;
+    table-layout: fixed;
+}
+
+th, td{
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    word-wrap: break-word;
+}
+
+th{
+    background: rgb(161,196,253);
+    background: linear-gradient(0deg, rgba(161,196,253,1) 40%, rgba(194,233,251,1) 100%);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* action1,2 adalah tombol delete dan update */
+#action-1{
+    background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+    margin: 10px;
+    padding: 15px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 1s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: inline-block;
+}
+#action-1[type="button"]:hover{
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+#action-2{
+    background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+    margin: 10px;
+    padding: 15px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 1s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: inline-block;
+}
+#action-2[type="button"]:hover{
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* btn1 adalah add todo */
+#btn1{
+    background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.subm{
+    background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 1s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+
+}
+
+.subm:hover{
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.logos {
+    width: 4cm;
+    height: 1.5cm;
+    padding-bottom: 0.1mm;
+}
+
+.yes_delete{
+    background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 1s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.yes_delete:hover{
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.no_delete{
+    background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 1s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.no_delete:hover{
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.sub_update {
+    background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 1s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.sub_update:hover{
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
